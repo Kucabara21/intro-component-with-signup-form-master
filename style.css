@@ -1,0 +1,169 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: hsl(0, 100%, 74%) ;
+    background-image: url("images/bg-intro-desktop.png");
+}
+
+.flexBox{
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 75%;
+    max-height: 80%;
+}
+.headings{
+    flex-basis: 50%;
+    margin-right: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+h1{
+    font-size: 2.5rem;
+    line-height: 2.8rem;
+    margin-bottom: 1.5rem;
+}
+p{
+    font-size: small;
+}
+.content{
+    flex-basis: 50%;
+}
+.price{
+    text-align: center;
+    font-size: .8rem;
+    color: hsl(246, 25%, 77%);
+    font-weight: 400;
+    padding: 1rem 0;
+    background-color: hsl(248, 32%, 49%);
+    margin-bottom: 1rem;
+    border-radius: .5rem;
+}
+.price .period{
+    color: white;
+    font-weight: 600;
+}
+
+.form{
+    padding: 2rem;
+    background-color: white;
+    border-radius: .5rem;
+}
+input{
+    box-sizing: border-box;
+    height: 2.8rem;
+    width: 100%;
+    padding-left: 1rem;
+    font-weight: 700;
+    color: hsl(249, 10%, 26%) ;
+}
+.form-control{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+    margin-bottom: .5rem;
+}
+.form-control img{
+    position: absolute;
+    top: .8rem;
+    right: 1.3rem;
+    width: 1.3rem;
+    opacity: 0;
+}
+.form-control span{
+    font-style: italic;
+    font-weight: 400;
+    display: inline-block;
+    color: hsl(0, 100%, 74%);
+    font-size: .6rem;
+    margin: .3rem 0;
+}
+button{
+    height: 2.5rem;
+    width: 100%;
+    background-color: hsl(154, 59%, 51%);
+    color: white;
+    font-size: .8rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-bottom: .7rem;
+}
+.formElements{
+    border: 1px solid gray;
+    border-radius: .3rem;
+}
+
+.terms{
+    display: flex;
+    color: hsl(246, 25%, 77%);
+    font-weight: 600;
+    font-size: .6rem;
+    justify-content: center;
+}
+.terms p{
+    font-size: .6rem;
+    margin-right: .2rem;
+
+}
+a{
+    text-decoration: none;
+    color: hsl(0, 100%, 74%) ;
+    display: inline;
+}
+.error img{
+    opacity: 1;
+}
+.error input{
+    border: 2px solid hsl(0, 100%, 74%) ;
+}
+.attribution{
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10px;
+}
+
+@media only screen and (max-width: 768px){
+    .flexBox{
+        display: flex;
+        flex-direction: column;
+        position: static;
+        left: 50%;
+        top: 0;
+        margin: 10% 10%;
+        transform: translate(0, 0);
+        min-width: 75%;
+        max-height: 80%;
+    }
+    .headings{
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    h1{
+        font-size: 1.5rem;
+        line-height: 2rem;
+        margin-bottom: 1rem;
+    }
+    .price{
+        padding: 1rem 4rem;
+    }
+    .terms{
+        flex-direction: column;
+        align-items: center;
+    }
+    .terms p{
+        margin-bottom: .3rem;
+    }
+    .attribution{
+        display: none;
+    }
+}
